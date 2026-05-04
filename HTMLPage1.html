@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">☰ visitor</div>
+
+            <div class="menu">
+                <button id="openAuth">Sign up / Log in</button>
+                <button id="openSaved">🔖 Saved Locations</button>
+            </div>
+        </aside>
+
+        <main class="main">
+            <section>
+                <h2>Dabas, arhitektūras objekti</h2>
+                <div class="grid" id="grid1"></div>
+            </section>
+
+            <section>
+                <h2>Muzeji</h2>
+                <div class="grid grid-3" id="grid2"></div>
+            </section>
+
+            <section>
+                <h2>Kafejnīcas, restorāni</h2>
+                <div class="grid" id="grid3"></div>
+            </section>
+
+            <section>
+                <h2>Viesnīcas</h2>
+                <div class="grid grid-3" id="grid4"></div>
+            </section>
+        </main>
+    </div>
+
+    <div class="overlay" id="savedPanel">
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Saved Locations</h2>
+                <button class="close-btn" id="closeSaved">×</button>
+            </div>
+
+            <div id="savedContent"></div>
+        </div>
+    </div>
+
+    <div class="overlay" id="authModal">
+        <div class="panel">
+            <div class="panel-header">
+                <h2>Sign up / Log in</h2>
+                <button class="close-btn" id="closeAuth">×</button>
+            </div>
+
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <button id="createAccountBtn">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
